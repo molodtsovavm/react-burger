@@ -5,3 +5,31 @@
   padding-bottom: 20px;
   color: var(--text-primary-color);
 }
+
+.other_ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 465px;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.order_row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (width <= 768px) {
+  .other_ingredients {
+    max-height: 272px;
+  }
+}
