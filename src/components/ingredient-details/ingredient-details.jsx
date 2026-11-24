@@ -10,7 +10,7 @@ export function IngredientDetails({ ingredient }) {
 
   return (
     <section className={`${styles.details} mb-15`}>
-      <img className={styles.image} src={ingredient.image_large} alt="" />
+      <img className={styles.image} src={ingredient.image_large} alt={ingredient.name} />
 
       <p className="text text_type_main-medium mt-4 mb-8">{ingredient.name}</p>
 

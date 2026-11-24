@@ -4,7 +4,8 @@ import {
   CurrencyIcon,
   DragIcon,
 } from '@krgaa/react-developer-burger-ui-components';
-import { useState } from 'react';
+
+import { useModal } from '@hooks/useModal';
 
 import Modal from '../modal/modal.jsx';
 import { OrderDetails } from '../order-details/order-details.jsx';
@@ -20,7 +21,7 @@ export const BurgerConstructor = ({ ingredients }) => {
     (bun?.price ?? 0) * 2 +
     otherIngredients.reduce((sum, ingredient) => sum + ingredient.price, 0);
 
-  const [isOrderOpen, setIsOrderOpen] = useState(false);
+  const { isModalOpen, openModal, closeModal } = useModal();
 
   return (
     <section className={`${styles.burger_constructor} pl-4`}>
@@ -69,14 +70,14 @@ export const BurgerConstructor = ({ ingredients }) => {
           size="large"
           htmlType="button"
           extraClass={'ml-10'}
-          onClick={() => setIsOrderOpen(true)}
+          onClick={openModal}
         >
           Оформить заказ
         </Button>
       </div>
 
-      {isOrderOpen && (
-        <Modal variant="order" onClose={() => setIsOrderOpen(false)}>
+      {isModalOpen && (
+        <Modal onClose={closeModal}>
           <OrderDetails orderNumber="034536" />
         </Modal>
       )}

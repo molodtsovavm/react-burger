@@ -8,7 +8,7 @@ import styles from './modal.module.css';
 
 const modalRoot = document.getElementById('modalRoot');
 
-function Modal({ children, title, onClose, variant }) {
+function Modal({ children, title, onClose }) {
   useEffect(() => {
     function handleKeyDown(event) {
       if (event.key === 'Escape') {
@@ -28,9 +28,7 @@ function Modal({ children, title, onClose, variant }) {
           <h3 className="text text_type_main-large mt-10 ml-10 mr-10">{title}</h3>
         )}
         <button
-          className={
-            variant === 'order' ? `${styles.close} ${styles.closeOrder}` : styles.close
-          }
+          className={title ? `${styles.close} ${styles.closeWithTitle}` : styles.close}
           type="button"
           onClick={onClose}
         >

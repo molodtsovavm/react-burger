@@ -11,7 +11,7 @@ export function OrderDetails({ orderNumber }) {
       <p className="text text_type_main-medium mt-8">идентификатор заказа</p>
 
       <p className={`${styles.order_check} mt-15 mb-15`}>
-        <img src={orderCheck} alt="" width={120} height={120} />
+        <img src={orderCheck} alt="Заказ принят" width={120} height={120} />
       </p>
 
       <p className="text text_type_main-default">Ваш заказ начали готовить</p>
