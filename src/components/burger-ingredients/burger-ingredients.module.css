@@ -13,3 +13,41 @@
   text-align: center;
   list-style-type: none;
 }
+
+.catalog {
+  max-height: 65vh;
+  overflow-y: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 24px;
+  list-style: none;
+}
+
+.card {
+  position: relative;
+  text-align: center;
+}
+
+.card_button {
+  width: 100%;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}

@@ -1,0 +1,8 @@
+.order_number {
+  text-shadow: 0 0 24px rgb(76 76 255 / 60%);
+}
+
+.order_check {
+  width: 120px;
+  height: 120px;
+}
